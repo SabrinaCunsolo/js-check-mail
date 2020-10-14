@@ -8,19 +8,28 @@
 var lista_email = ["sabrina@gmail.com", "sara@gmail.com","mario@gmail.com", "luca@gmail.com", "carla@gmail.com"]
 
 console.log(lista_email)
+var isEmailFound = false;
 
 // chiedo utente proprio indirizzo email
 var email = prompt('Qual è il tuo indirizzo email?');
 
+// serve una variabile che si ricordi se la mail è stata trovata
+
 // verifico se email è in lista array
-for (var i = 0; i < lista_email; i++) {
-    console.log(lista_email [i]);
+for (var i = 0; i < lista_email.length; i++) {
+    if (email == lista_email[i]) {
+        isEmailFound = true;
+    }
+    //console.log(lista_email[i]);
+
+    // qui devo verificare se la mail che ho inserito è quella che sto esaminando nel ciclo for
 }
 
-if (email === lista_email) {
-    alert ("Sei in lista!")
-} else { (email !== lista_email)
-    alert ("Non sei in lista!")
+// se l'ho trovata lo dico, altrimenti dico il contrario
+if (isEmailFound == true) {
+    alert ("Sei in lista!");
+} else {
+    alert ("Non sei in lista!");
 }
 // comunico utente che in lista
 // comunico utente che non in lista
